@@ -13,7 +13,7 @@ function findAddress($lines) {
 }
 
 function findDateTime($lines) {
-  //Finds dates that are in format MM-DD-YYYY and times that are in the format {H}H:MM {AM|PM}. Again, this is only used an examples. External APIs will have to be leveraged in order to be comprehensive in date/time extraction.
+  //Finds dates that are in format MM-DD-YYYY and times that are in the format {H}H:MM {AM|PM}. Again, this is only used as an example. External APIs will have to be leveraged in order to be comprehensive in date/time extraction.
   $date = "";
   $time = "";
   $date_regex = '/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/';
