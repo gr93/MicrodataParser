@@ -34,7 +34,7 @@ function findDateTime($lines) {
 function main() {
 
   date_default_timezone_set('America/New_York');
-  //$conn = mysqli_connect("127.0.0.1", "gopalr", "", "TempDB");
+  $conn = mysqli_connect("127.0.0.1", "gopalr", "", "TempDB");
   $myfile = "test.HTML";
 
   //Get address, date, and time from the post.
@@ -61,8 +61,8 @@ function main() {
   fclose($fp);
 
   //Write event info into database.
-  //$query = "INSERT INTO eventInfo('ID', 'Date', 'Time', 'Address') VALUES (1, '{$date}', '{$time}', '{$address}')";
-  //mysqli_query($conn, $query) or die("Query not executed successfully.");
+  $query = "INSERT INTO eventInfo('ID', 'Date', 'Time', 'Address') VALUES (1, '{$date}', '{$time}', '{$address}')";
+  mysqli_query($conn, $query) or die("Query not executed successfully.");
 }
 
 main();
