@@ -2,8 +2,6 @@
 
 //PHP script for finding important event information within blog posts. The script adds this information to the database for easier access in other activities. In addition, it places this event information into schema microdata tags for SEO optimization.
 
-
-
 function findAddress($lines) {
   //Finds address by searching for finding line with a zipcode, and then concatenating the previous line with that line. This is prone to errors, however, and is only used as an example for showing how the script would work. A better method would involve leveraging existing APIs, such as Google's GeoCoding API.
   for($i = 0; $i<count($lines); $i++) {
